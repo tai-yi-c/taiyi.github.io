@@ -1,6 +1,6 @@
 [TOC]
 
-# selection algrithm
+# selection algorithm
 
 问题描述：在一组乱序的数组之中寻找任意第K小的元素
 输入：数组指针与待查找的序号k
@@ -37,8 +37,8 @@ int random_selection(int a[],int first,int last,int k)：
     if(first>=last) return a[first];
     在first到last，随机取第p个元素;
     把a[p]交换到末尾;
-    p=partition(a,first,last);
-    if（k-1>p)  return random_selection(a,p+1,last);
+    p=partition(a,first,last,k);
+    if（k-1>p)  return random_selection(a,p+1,last,k);
     else if(k-1==p) return a[p];
     else return random_selection(a,first,p-1);
 ```
@@ -53,28 +53,33 @@ void swap(int& a, int& b);
 
 
 int random_selection(int a[], int first, int last, int k) {
+    if (k > last + 1) return -1;
     if (first >= last) return a[first];//递归基，按照原理来说，其实不用它也不会出错
-    int p = rand() % (last - first + 1) + first;//first不要漏加
-    swap(a[p], a[last]);
-    p = partition(a, first, last);
-    if(k - 1 > p){
-    return random_selection(a, p + 1, last);//多个功能相似的函数一起写的时候，这个地方不要不小心写错
-    }
-    else if (k - 1 == p) {
-        return a[p];
-    }
     else {
-        return random_selection(a, first, p - 1);
+        int p = (rand() % (last - first + 1)) + first;//first不要漏加
+        swap(a[p], a[last]);
+        int pivot_r = partition(a, first, last);
+        if (k - 1 > pivot_r) {
+            return random_selection(a, pivot_r + 1, last, k);//多个功能相似的函数一起写的时候，这个地方不要不小心写错
+        }
+        else if (k - 1 == pivot_r) {
+            return a[pivot_r];
+        }
+        else {
+            return random_selection(a, first, pivot_r - 1, k);
+        }
     }
+    
 }
 int partition(int a[], int first, int last) {
+    int pivot = a[last];
     int i = first, j = last - 1;//左边是first右边是last，绝对不要默认是从0到length
     while (true) {
-        while (a[i] < a[last]) {
+        while (a[i] < pivot) {
             i++;
             if (i == last) break;//不要漏写，因为对于升序的数组，是有可能会到末尾的，要防止越界
         }
-        while (a[j] >= a[last]) {
+        while (a[j] >= pivot) {
             j--;
             if (j == first) break;//不要漏写，因为对于降序的数组，是有可能会到末尾的，要防止越界
         }
@@ -82,7 +87,7 @@ int partition(int a[], int first, int last) {
         swap(a[i], a[j]);
     }
     swap(a[i], a[last]);
-    return i;
+    return i ;
 }
 void swap(int& a, int& b) {//交换注意要使用引用
     int t = a;
@@ -182,7 +187,7 @@ void select_pivot(int* a,int first,int last) {
 
 ## 3.debug记录(下面写的和上面的代码不太一样)
 
-* 递归函数名写错![](.\markdowm图片\图片1.png)
+* 递归函数名写错![](C:\Users\ShXY\Desktop\markdown图片\图片1.png)
 
 
 
@@ -196,7 +201,7 @@ void select_pivot(int* a,int first,int last) {
 
 - 函数中的数组不一定是从0开始的，要提醒自己是不是忘记加左端了
 
-![](.\markdowm图片\图片2.png)
+![](C:\Users\ShXY\Desktop\markdown图片\图片2.png)
 
 两处的错误都是一样的i不是从0开始的，而是从first开始的，pivot也不能直接是i*5+2而应该再加上first
 
@@ -204,7 +209,7 @@ void select_pivot(int* a,int first,int last) {
 
 - partition最后的i位置就是last元素应该交换的位置，写成i-1就错了
 
-  ![](.\markdowm图片\图片3.png)
+  ![](C:\Users\ShXY\Desktop\markdown图片\图片3.png)
 
 
 
@@ -214,9 +219,9 @@ void select_pivot(int* a,int first,int last) {
 
 ## 4.代码比较(每个规模50次运行取平均值)
 
-![](.\markdowm图片\图片4.png)
+![](C:\Users\ShXY\Desktop\markdown图片\图片4.png)
 
-![](.\markdowm图片\图片5.png)
+![](C:\Users\ShXY\Desktop\markdown图片\图片5.png)
 
 > 结论：
 > selection 中random比determinstic要快
