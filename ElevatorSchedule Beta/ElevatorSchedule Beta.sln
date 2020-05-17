@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30002.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElevatorSchedule Beta", "ElevatorSchedule Beta\ElevatorSchedule Beta.csproj", "{67A8F709-74E6-4202-8AF7-C80A9B93449D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67A8F709-74E6-4202-8AF7-C80A9B93449D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67A8F709-74E6-4202-8AF7-C80A9B93449D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67A8F709-74E6-4202-8AF7-C80A9B93449D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67A8F709-74E6-4202-8AF7-C80A9B93449D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0D9B1E75-5CD4-428F-AF4C-E099E22B5BA4}
+	EndGlobalSection
+EndGlobal

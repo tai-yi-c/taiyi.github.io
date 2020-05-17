@@ -1,0 +1,11 @@
+C:\Users\ShXY\source\repos\ElevatorSchedule Beta\ElevatorSchedule Beta\obj\Debug\ElevatorSchedule Beta.csprojAssemblyReference.cache
+C:\Users\ShXY\source\repos\ElevatorSchedule Beta\ElevatorSchedule Beta\obj\Debug\ElevatorSchedule_Beta.Elevator.resources
+C:\Users\ShXY\source\repos\ElevatorSchedule Beta\ElevatorSchedule Beta\obj\Debug\ElevatorSchedule_Beta.ElevatorSchedule.resources
+C:\Users\ShXY\source\repos\ElevatorSchedule Beta\ElevatorSchedule Beta\obj\Debug\ElevatorSchedule_Beta.Properties.Resources.resources
+C:\Users\ShXY\source\repos\ElevatorSchedule Beta\ElevatorSchedule Beta\obj\Debug\ElevatorSchedule Beta.csproj.GenerateResource.cache
+C:\Users\ShXY\source\repos\ElevatorSchedule Beta\ElevatorSchedule Beta\obj\Debug\ElevatorSchedule Beta.csproj.CoreCompileInputs.cache
+C:\Users\ShXY\source\repos\ElevatorSchedule Beta\ElevatorSchedule Beta\bin\Debug\ElevatorSchedule Beta.exe.config
+C:\Users\ShXY\source\repos\ElevatorSchedule Beta\ElevatorSchedule Beta\bin\Debug\ElevatorSchedule Beta.exe
+C:\Users\ShXY\source\repos\ElevatorSchedule Beta\ElevatorSchedule Beta\bin\Debug\ElevatorSchedule Beta.pdb
+C:\Users\ShXY\source\repos\ElevatorSchedule Beta\ElevatorSchedule Beta\obj\Debug\ElevatorSchedule Beta.exe
+C:\Users\ShXY\source\repos\ElevatorSchedule Beta\ElevatorSchedule Beta\obj\Debug\ElevatorSchedule Beta.pdb
